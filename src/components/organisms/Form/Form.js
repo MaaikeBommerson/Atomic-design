@@ -10,9 +10,11 @@ const Form = (props) => {
         <div ClassName="Form">
             <FormGroup label={'username'} type={'text'}
                     padding={20} color={'#C00'} width={200} />
+
             <FormGroup label={'Password'} type={'password'}
                     padding={20} color={'#C00'} width={200} />
-            <ButtonBar />
+            <ButtonBar position={'left'} padding={20} buttonLeft={'Login'} buttonRight={'Password forgotten'}/>
+ 
         </div>
     )
 }

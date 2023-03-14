@@ -19,7 +19,7 @@ const ButtonBar = ({ position, padding, buttonLeft, buttonRight }) => {
 
     return(
         <div className="ButtonBar" style={ style }>     
-         <Button label={buttonLeft.label}
+         <Button label={ buttonLeft.label }
                  size={ buttonLeft.size }
                  backgroundColor={ buttonLeft.backgroundColor}
                  color={ buttonLeft.color }
