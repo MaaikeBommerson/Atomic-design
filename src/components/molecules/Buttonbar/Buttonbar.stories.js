@@ -1,25 +1,44 @@
 import React from 'react'
-import Buttonbar from './Buttonbar'
+import ButtonBar from './Buttonbar'
 
-/// TODO: fix story entries
-const ButtonbarMeta = {
-    title: "molecules/Buttonbar",
-    component: Buttonbar,
-    argTypes: {
-        testID: { table: { disable: true } },
-        size: { name: "Size" },
-        type: { name: "Type"}
-    }
+export default {
+    title: "Molecules/ButtonBar",
+    component: ButtonBar
 }
 
-const testID = "Buttonbar-" + Math.floor(Math.random() * 90000) + 10000
-const Template = (args) => <Buttonbar {...args} />
+const Template = args => <ButtonBar {...args} />
 
-export const DefaultButtonbar = Template.bind({})
-DefaultButtonbar.args = {
-    testID: testID,
+const buttonLeft = {
+    label: "Forgot Password",
     size: "medium",
-    type: "regular"
+    color: "#000",
+    backgroundColor: "#CCC",    
+}
+const buttonRight = {
+    label: "Login",
+    size: "medium",
+    color: "#000",
+    backgroundColor: "#CDF",    
 }
 
-export default ButtonbarMeta
+
+export const Left = Template.bind({})
+Left.args = {
+   position: "left",
+   buttonLeft: buttonLeft,
+   buttonRight: buttonRight,
+}
+
+export const Center = Template.bind({})
+Center.args = {
+   position: "center",
+   buttonLeft: buttonLeft,
+   buttonRight: buttonRight,
+}
+
+export const Right = Template.bind({})
+Right.args = {
+   position: "right",
+   buttonLeft: buttonLeft,
+   buttonRight: buttonRight,
+}

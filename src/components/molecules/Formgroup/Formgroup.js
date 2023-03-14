@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
-import Label from "../Label"
-import Input from "../Input"
+import Label from "../../atoms/Label"
+import Input from "../../atoms/Input"
 
 const FormGroup = ({ label, type, padding, color, width }) => {
 

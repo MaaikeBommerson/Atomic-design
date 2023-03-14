@@ -1,25 +1,27 @@
 import React from 'react'
-import Formgroup from './Formgroup'
+import FormGroup from '../Formgroup'
 
-/// TODO: fix story entries
-const FormgroupMeta = {
-    title: "molecules/Formgroup",
-    component: Formgroup,
-    argTypes: {
-        testID: { table: { disable: true } },
-        size: { name: "Size" },
-        type: { name: "Type"}
-    }
+export default {
+    title: "Molecules/FormField",
+    component: FormGroup
 }
 
-const testID = "Formgroup-" + Math.floor(Math.random() * 90000) + 10000
-const Template = (args) => <Formgroup {...args} />
+const Template = args => <FormGroup {...args} />
 
-export const DefaultFormgroup = Template.bind({})
-DefaultFormgroup.args = {
-    testID: testID,
-    size: "medium",
-    type: "regular"
+export const EmailInput = Template.bind({})
+EmailInput.args = {
+    label: "Email",
+    type: "email",
+    padding: "medium",
+    width: 100,
+    color: "black"
 }
 
-export default FormgroupMeta
+export const PasswordInput = Template.bind({})
+PasswordInput.args =  {
+    label: "Password",
+    type: "password",
+    padding: "medium",
+    width: 100,
+    color: "black"
+}

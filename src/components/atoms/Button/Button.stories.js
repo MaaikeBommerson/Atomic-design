@@ -1,25 +1,25 @@
 import React from 'react'
 import Button from './Button'
 
-/// TODO: fix story entries
-const ButtonMeta = {
-    title: "atoms/Button",
-    component: Button,
-    argTypes: {
-        testID: { table: { disable: true } },
-        size: { name: "Size" },
-        type: { name: "Type"}
-    }
+export default {
+    title: "Atoms/Button",
+    component: Button
 }
 
-const testID = "Button-" + Math.floor(Math.random() * 90000) + 10000
-const Template = (args) => <Button {...args} />
+const Template = args => <Button {...args} />
 
-export const DefaultButton = Template.bind({})
-DefaultButton.args = {
-    testID: testID,
+export const Login = Template.bind({})
+Login.args = {
     size: "medium",
-    type: "regular"
+    label: "Login",
+    backgroundColor: "#F00" ,
+    color: "#FFF"   
 }
 
-export default ButtonMeta
+export const Forgot = Template.bind({})
+Forgot.args = {
+    size: "medium",
+    label: "Forgot Password",
+    backgroundColor: "#00F" ,  
+    color: "#FFF"
+}
