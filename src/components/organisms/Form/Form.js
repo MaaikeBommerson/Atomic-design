@@ -5,6 +5,13 @@ import ButtonBar from '../../molecules/Buttonbar'
 
 const Form = (props) => {
 
+    const bLeft ={
+        label: "Inloggen",
+    }
+
+    const bRight ={
+        label: "Password forgotten",
+    }
 
     return(
         <div ClassName="Form">
@@ -13,7 +20,7 @@ const Form = (props) => {
 
             <FormGroup label={'Password'} type={'password'}
                     padding={20} color={'#C00'} width={200} />
-            <ButtonBar position={'left'} padding={20} buttonLeft={'Login'} buttonRight={'Password forgotten'}/>
+            <ButtonBar position={'left'} padding={20} buttonLeft={bLeft} buttonRight={bRight} />
  
         </div>
     )

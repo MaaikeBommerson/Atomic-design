@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from './Form'
+import ButtonBar from '../../molecules/Buttonbar'
 
 /// TODO: fix story entries
 const FormMeta = {
